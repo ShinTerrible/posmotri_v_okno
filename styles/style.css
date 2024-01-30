@@ -17,7 +17,9 @@ html {
     font-size: 18px;
     background-color: #1b1919;
     padding: 133px 30px;
-    max-height: 800px;
+    min-height: 800px;
+    display: flex;
+    align-items: center;
 }
 
 h1,
@@ -68,10 +70,9 @@ ol {
     display: grid;
     max-width: 1140px;
     grid-template-columns: 711px 399px;
-    grid-template-rows: 60vh;
+    grid-template-rows: auto;
     gap: 30px;
     margin: 0 auto;
-    vertical-align: bottom;
 }
 
 /* БЛОК ВЫБРАННОГО ВИДЕО */
@@ -83,6 +84,7 @@ ol {
     gap: 12px;
     max-width: 100%;
     padding-top: 78px;
+    vertical-align: middle;
 }
 
 .result__video {
@@ -217,7 +219,6 @@ ol {
 
 .content__accent {
     color: #545050;
-    max-height: 210px;
 }
 
 /* Карточки видео */
@@ -242,10 +243,11 @@ ol {
 }
 
 .content__card-link {
+    display: block;
     text-decoration: none;
 }
 
-.content__list-item:first-of-type {
+.content__card-link_current {
     background-color: #545050;
 }
 
@@ -334,7 +336,8 @@ ol {
 }
 
 .search-form__textfield:focus {
-    outline: 1px #fff underline;
+    outline: 1px solid #fff;
+    outline-offset: 1px;
     border: transparent;
     border-bottom: 1px solid #fff;
 }
